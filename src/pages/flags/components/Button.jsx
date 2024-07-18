@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Button = ({handleAnswer, code, style}) => {
+const Button = ({handleAnswer, code, index, style}) => {
   return (
-    <button className={style} onClick={() => handleAnswer(code)}>
+    <button className={style} onClick={() => handleAnswer(code,index)}>
       <img
       src={`/flags/${code}.svg`} 
       alt='loading...'/>

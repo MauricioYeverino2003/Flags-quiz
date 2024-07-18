@@ -18,12 +18,12 @@ const getQuestions = (number) =>{
   const questions = countries.map((country) => {
 
     const answer =  country.code;
-    const questionOptions = [country.code]
+    const questionOptions = [answer]
   
     //Randomly push remaining options
     while(questionOptions.length < 4){
       const randomOption = getRandom(options).code;
-      if( randomOption !== answer){
+      if(!questionOptions.includes(randomOption)){
         questionOptions.push(randomOption);
       }
     }
@@ -35,8 +35,8 @@ const getQuestions = (number) =>{
       country: country.name,
       optionsCode: questionOptionsShuffled,
       answerCode: answer
-    })
-  ;})
+    });
+  })
 
   if(number !== 254){
     return questions.slice(0,number);
