@@ -4,6 +4,27 @@
   align-items: space-around;
 }
 
+.game-lives img{
+  width: 4rem;
+  margin: 0 1rem 0 1rem;
+}
+
+.game-lives img{
+  width: 4rem;
+  margin: 0 1rem 0 1rem;
+  transition: all 0.5s ease;
+}
+
+.country-name{
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.buttons-container{
+  overflow: wrap;
+  min-width: 17rem;
+}
+
 .flagsmode-container button{
   min-width: 16rem;
   font-size: 2rem;
@@ -16,7 +37,7 @@
 padding-bottom: 4rem;
 }
 
-.game-container img {
+.flag-icon{
   width: 8rem;
   height: 6rem;
   margin: 0.25rem;
