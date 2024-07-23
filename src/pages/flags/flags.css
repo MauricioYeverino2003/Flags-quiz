@@ -4,9 +4,24 @@
   align-items: space-around;
 }
 
-.game-lives img{
+.flagsmode-container button{
+  min-width: 16rem;
+  font-size: 2rem;
+  font-family: Helvetica;
+  padding: 1rem 0 1rem 0;
+  border-radius: 0.5rem;
+}
+
+.flagsmode-container a{
+padding-bottom: 3rem;
+}
+
+.return-button{
+  position: absolute;
+  left: 2rem;
+  top: 2rem;
+  height: 2rem;
   width: 4rem;
-  margin: 0 1rem 0 1rem;
 }
 
 .game-lives img{
@@ -23,18 +38,6 @@
 .buttons-container{
   overflow: wrap;
   min-width: 17rem;
-}
-
-.flagsmode-container button{
-  min-width: 16rem;
-  font-size: 2rem;
-  font-family: Helvetica;
-  padding: 1rem 0 1rem 0;
-  border-radius: 0.5rem;
-}
-
-.flagsmode-container a{
-padding-bottom: 4rem;
 }
 
 .flag-icon{
@@ -54,4 +57,14 @@ padding-bottom: 4rem;
 
 .green-button{
   background-color: rgb(47, 202, 60);
+}
+
+.endgame-container{
+  display: flex;
+  flex-direction: column;
+  width: 80vw;
+}
+
+.endgame-container img{
+  object-fit: cover;
 }

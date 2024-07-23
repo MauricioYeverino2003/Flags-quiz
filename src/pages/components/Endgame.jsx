@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom';
 
 const Endgame = ({lives, number}) => {
 
@@ -6,7 +7,11 @@ const Endgame = ({lives, number}) => {
   const [url, setUrl] = useState('');
   const [loading, setLoading] = useState(true)
 
-  useEffect(async ()=>{
+  useEffect( ()=>{
+    fetchImage();
+  }, [])
+
+  const fetchImage = async () => {
     const result = (lives > 0);
     setWin(result);
     const type = result ? 'happy' : 'cry';
@@ -22,13 +27,16 @@ const Endgame = ({lives, number}) => {
       console.error(error.message);
     }
     setLoading(false);
-  }, [])
+  }
 
   if(loading) return <div>Loading...</div>
 
   return (
-    <div>
-      <p>{win?"Congratulations":"Wow... You need to keep practicing..."}</p>
+    <div className='endgame-container'>
+      <Link to={'/'}>
+        <button className='return-button'>Return</button>
+      </Link>
+      <p>{win?"Congratulations":"Wow... You need to keep practicing...\n"}</p>
       <img src={url} alt='...loading'/>
     </div>
   )

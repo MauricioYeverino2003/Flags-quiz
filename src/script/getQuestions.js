@@ -14,7 +14,7 @@ function getRandom (list) {
   return list[Math.floor((Math.random()*list.length))];
 }
 
-const getQuestions = (number) =>{
+const getQuestions = (number, mode) =>{
   const questions = countries.map((country) => {
 
     const answer =  country.code;
@@ -30,12 +30,20 @@ const getQuestions = (number) =>{
   
     const questionOptionsShuffled = shuffle(questionOptions);
   
-  
-    return ({
-      country: country.name,
-      optionsCode: questionOptionsShuffled,
-      answerCode: answer
-    });
+    if(mode === 'flags'){
+      return ({
+        country: country.name,
+        optionsCode: questionOptionsShuffled,
+        answerCode: answer
+      });
+    }
+    if(mode === 'capitals'){
+      return ({
+        country: country.capital,
+        optionsCode: questionOptionsShuffled,
+        answerCode: answer
+      });
+    }
   })
 
   if(number !== 254){

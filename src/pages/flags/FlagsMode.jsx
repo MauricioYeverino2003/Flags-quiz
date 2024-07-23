@@ -4,7 +4,11 @@ import './flags.css';
 
 const FlagsMode= () => {
   return (
-    <div className='flagsmode-container'>
+    <>
+      <Link to={'/'}>
+        <button className='return-button'>Return</button>
+      </Link>
+      <div className='flagsmode-container'>
       <Link to={'/flagsgame/25'}>
         <button>Beginner</button>
       </Link>
@@ -18,6 +22,7 @@ const FlagsMode= () => {
         <button>Ultimate</button>
       </Link>
     </div>
+    </>
   )
 }
 

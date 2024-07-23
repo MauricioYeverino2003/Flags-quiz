@@ -8,6 +8,9 @@ const Home = () => {
       <Link to={'/flagsmode'}>
         <button>Flags Game</button>
       </Link>
+      <Link to={'/capitalsmode'}>
+        <button>Capitals Game</button>
+      </Link>
     </div>
   )
 }

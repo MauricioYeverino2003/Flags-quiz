@@ -34,7 +34,7 @@ const FlagsGame = () => {
 
     setNumber(num);
 
-    const questionSet = getQuestions(254, 'flags');
+    const questionSet = getQuestions(254, 'capitals');
     const questionsReady = shuffleQuestions(questionSet);
     setGameState((prevState) => ({
       ...prevState,
@@ -88,7 +88,7 @@ const FlagsGame = () => {
 
   return (
     <div className='game-container'>
-      <Link to={'/flagsmode'}>
+      <Link to={'/capitalsmode'}>
         <button className='return-button'>Return</button>
       </Link>
       <div className='game-lives'>
