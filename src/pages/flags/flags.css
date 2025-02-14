@@ -10,10 +10,16 @@
   font-family: Helvetica;
   padding: 1rem 0 1rem 0;
   border-radius: 0.5rem;
+  background-color: #3E424B;
+  transition: background-color 0.35s;
+}
+
+.flagsmode-container button:hover{
+  background-color: #3D606E;
 }
 
 .flagsmode-container a{
-padding-bottom: 3rem;
+margin-bottom: 3rem;
 }
 
 .return-button{
@@ -40,6 +46,11 @@ padding-bottom: 3rem;
   min-width: 17rem;
 }
 
+.buttons-container button{
+  border-radius: 0.5rem;
+}
+
+
 .flag-icon{
   width: 8rem;
   height: 6rem;
@@ -49,6 +60,11 @@ padding-bottom: 3rem;
 .game-container button {
   border: none;
   margin: 0.2rem;
+  transition: opacity 0.25s;
+}
+
+.game-container button:hover {
+  opacity: 0.80;
 }
 
 .red-button{

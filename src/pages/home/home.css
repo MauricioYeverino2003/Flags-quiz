@@ -10,8 +10,14 @@
   font-family: Helvetica;
   padding: 1rem 0 1rem 0;
   border-radius: 0.5rem;
+  background-color: #3E424B;
+  transition: background-color 0.35s;
+}
+
+.home-container button:hover{
+  background-color: #3D606E;
 }
 
 .home-container a{
-padding-bottom: 4rem;
+margin-bottom: 4rem;
 }
